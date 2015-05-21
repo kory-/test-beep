@@ -15,7 +15,7 @@ ZGN(function()
   // upボタンをクリック
   $(document).on('click', '#up', function() {
     level = level + 10; // levelを1上げる
-    gpio.pwmWrite(Pin, level / 1000); // デューティー比の設定
+    gpio.pwmWrite(Pin, level / 10000); // デューティー比の設定
 
     $('#pwm').text(level);
   });
@@ -23,7 +23,7 @@ ZGN(function()
   // dwonボタンをクリック
   $(document).on('click', '#down', function() {
     level = level <= 0 ? 0 : level - 10; // levelを1下げる
-    gpio.pwmWrite(Pin, level / 1000); // デューティー比の設定
+    gpio.pwmWrite(Pin, level / 10000); // デューティー比の設定
 
     $('#pwm').text(level);
   });
