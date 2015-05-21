@@ -14,16 +14,16 @@ ZGN(function()
 
   // upボタンをクリック
   $(document).on('click', '#up', function() {
-    level = level + 1; // levelを1上げる
-    gpio.pwmWrite(Pin, level); // デューティー比の設定
+    level = level + 10; // levelを1上げる
+    gpio.pwmWrite(Pin, level / 100); // デューティー比の設定
 
     $('#pwm').text(level);
   });
 
   // dwonボタンをクリック
   $(document).on('click', '#down', function() {
-    level = level <= 0 ? 0 : level - 1; // levelを1下げる
-    gpio.pwmWrite(Pin, level); // デューティー比の設定
+    level = level <= 0 ? 0 : level - 10; // levelを1下げる
+    gpio.pwmWrite(Pin, level / 100); // デューティー比の設定
 
     $('#pwm').text(level);
   });
