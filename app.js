@@ -5,7 +5,7 @@ ZGN(function()
 
   // TerminalのGPIOインスタンスを取得します
   var gpio = ZGN.term('1').gpio;
-  var dute = 1000;
+  var dute = 10000;
 
   // 調光の初期値を0に設定します
   var level = 0;
