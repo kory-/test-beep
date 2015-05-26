@@ -16,7 +16,7 @@ ZGN(function()
   setInterval(beep,100);
 
   function beep(){
-    level = level + 1;
+    level = level + 10;
     gpio.pwmWrite(Pin, level / dute); // デューティー比の設定
 
     $('#pwm').text(level/dute);
