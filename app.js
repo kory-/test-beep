@@ -13,7 +13,7 @@ ZGN(function()
   // 指定ピンをPWMに設定
   gpio.pinMode(Pin, ZGN.PWM);
 
-  setInterval("beep()",100);
+  setInterval(beep,100);
 
   function beep(){
     level = level + 1;
